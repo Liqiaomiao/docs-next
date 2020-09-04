@@ -24,7 +24,7 @@ app.component('button-counter', {
 })
 ```
 
-::: tip 提示
+::: info 提示
 我们在此向你展示对是一个简单的示例，但通常在 Vue 应用中我们会使用单文件组件而不是字符串模板，你可以在[这个章节](single-file-component.html)中找到更多介绍。
 :::
 
@@ -238,9 +238,9 @@ app.component('blog-post', {
 
 有了这个 `v-on:enlarge-text="postFontSize += 0.1"` 监听器，父级组件就会接收该事件并更新 `postFontSize` 的值。
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="shenqingchuan" data-slug-hash="LYNxRWL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="组件基础：发射事件">
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="shenqingchuan" data-slug-hash="LYNxRWL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="组件基础：触发事件">
   <span>See the Pen <a href="https://codepen.io/shenqingchuan/pen/LYNxRWL">
-  组件基础：发射事件</a> by shenqingchuan (<a href="https://codepen.io/shenqingchuan">@shenqingchuan</a>)
+  组件基础：触发事件</a> by shenqingchuan (<a href="https://codepen.io/shenqingchuan">@shenqingchuan</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -254,7 +254,7 @@ app.component('blog-post', {
 })
 ```
 
-这将允许您检查组件发射的所有事件，并可选地[验证它们](component-custom-events.html#validate-emitted-events)。
+这将允许您检查组件触发的所有事件，并可选地[验证它们](component-custom-events.html#validate-emitted-events)。
 
 ### 使用事件抛出一个值
 
@@ -311,7 +311,7 @@ methods: {
 ></custom-input>
 ```
 
-::: warning 提示
+::: warning 警告
 请注意对 `model-value` 这里我们使用对是短横线连接对 kebab-case 格式，因为我们使用的是 DOM 上对模板，您可以在[DOM 模板解析说明](#dom-template-parsing-caveats)中找到关于短横线连接格式 kebab-cased 和 camelCased 驼峰格式 attribute 的详细解释。
 :::
 
@@ -452,7 +452,7 @@ app.component('alert-box', {
 </table>
 ```
 
-:::warning
+:::warning 注意
 `v-is` 的值应该是一个 JavaScript 字符串字面量：
 
 ```html

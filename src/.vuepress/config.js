@@ -101,7 +101,7 @@ const sidebar = {
       children: ['/guide/routing', '/guide/state-management', '/guide/ssr']
     },
     {
-      title: '可访问性',
+      title: '无障碍访问',
       collapsable: false,
       children: [
         '/guide/a11y-basics',
@@ -130,6 +130,7 @@ const sidebar = {
         'migration/keycode-modifiers',
         'migration/render-function-api',
         'migration/slots-unification',
+        'migration/transition',
         'migration/v-model'
       ]
     },
@@ -214,7 +215,13 @@ module.exports = {
         rel: 'stylesheet'
       }
     ],
-    ['link', { rel: 'icon', href: '/logo.png' }],
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/logo.png'
+      }
+    ],
     [
       'script',
       {
@@ -234,15 +241,30 @@ module.exports = {
     nav: [
       {
         text: '文档',
-        ariaLabel: 'Documentation Menu',
+        ariaLabel: '文档菜单',
         items: [
-          { text: '教程', link: '/guide/introduction' },
-          { text: '风格指南', link: '/style-guide/' },
-          { text: 'Cookbook', link: '/cookbook/' },
-          { text: '示例', link: '/examples/markdown' }
+          {
+            text: '教程',
+            link: '/guide/introduction'
+          },
+          {
+            text: '风格指南',
+            link: '/style-guide/'
+          },
+          {
+            text: 'Cookbook',
+            link: '/cookbook/'
+          },
+          {
+            text: '示例',
+            link: '/examples/markdown'
+          }
         ]
       },
-      { text: 'API 参考', link: '/api/application-config' },
+      {
+        text: 'API 手册',
+        link: '/api/application-config'
+      },
       {
         text: '生态系统',
         items: [
@@ -250,18 +272,39 @@ module.exports = {
             text: '社区',
             ariaLabel: 'Community Menu',
             items: [
-              { text: '团队', link: '/community/team/' },
-              { text: '合作伙伴', link: '/community/partners' },
-              { text: '加入我们', link: '/community/join/' },
-              { text: '主题', link: '/community/themes/' }
+              {
+                text: '团队',
+                link: '/community/team/'
+              },
+              {
+                text: '合作伙伴',
+                link: '/community/partners'
+              },
+              {
+                text: '加入',
+                link: '/community/join/'
+              },
+              {
+                text: '主题',
+                link: '/community/themes/'
+              }
             ]
           },
           {
             text: '核心插件',
             items: [
-              { text: 'Vue Router', link: 'https://router.vuejs.org/' },
-              { text: 'Vuex', link: 'https://vuex.vuejs.org/' },
-              { text: 'Vue CLI', link: 'https://cli.vuejs.org/' },
+              {
+                text: 'Vue Router',
+                link: 'https://router.vuejs.org/'
+              },
+              {
+                text: 'Vuex',
+                link: 'https://vuex.vuejs.org/'
+              },
+              {
+                text: 'Vue CLI',
+                link: 'https://cli.vuejs.org/'
+              },
               {
                 text: 'Vue Test Utils',
                 link: 'https://vue-test-utils.vuejs.org/'
